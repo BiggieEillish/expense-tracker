@@ -1,38 +1,147 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 500;
+  padding: 500;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #f4f4f9;
+}
+
+h2 {
   text-align: center;
+  margin: 20px 0;
+  color: #990a0a;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background-color: rgb(36, 171, 97);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h4 {
+  margin: 10px 0;
+  font-weight: bold;
+  color: #555;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.money {
+  font-size: 1.4rem;
+  margin-top: 8px;
+}
+
+.money.plus {
+  color: #2ecc71;
+}
+
+.money.minus {
+  color: #e74c3c;
+}
+
+.inc-exp-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.inc-exp-container div {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  width: 48%;
+  text-align: center;
+  border: 2px solid #dedede;
+}
+
+.inc-exp-container div h4 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #666;
+}
+
+.inc-exp-container div p {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+ul.list {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+ul.list li {
+  background-color: #f9f9f9;
+  border-left: 5px solid;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+ul.list li.plus {
+  border-left-color: #2ecc71;
+}
+
+ul.list li.minus {
+  border-left-color: #e74c3c;
+}
+
+ul.list li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+  margin: 20px 0;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.form-control input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1.1rem;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  background-color: #3498db;
   color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.btn:hover {
+  background-color: #2980b9;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
